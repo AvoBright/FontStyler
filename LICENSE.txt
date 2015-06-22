@@ -189,4 +189,3 @@ Legal Terms
     http://www.freetype.org
 
 
---- end of FTL.TXT ---
