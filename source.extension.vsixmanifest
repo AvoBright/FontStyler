@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="FontStyler.AvoBright.ce4608e4-2cbd-4909-a88d-2e0116dd2378" Version="1.0" Language="en-US" Publisher="AvoBright" />
+    <DisplayName>Font Styler</DisplayName>
+    <Description xml:space="preserve">An Visual Studio extension that provide a GUI to customize text, preview it, and generate the CSS.</Description>
+    <MoreInfo>https://github.com/AvoBright/FontStyler</MoreInfo>
+    <License>LICENSE.txt</License>
+    <Icon>Resources\logo.png</Icon>
+    <PreviewImage>Resources\logo.png</PreviewImage>
+    <Tags>Web, Font, CSS</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.0,)" />
+    <Dependency Id="Microsoft.VisualStudio.MPF" DisplayName="Visual Studio MPF" d:Source="Installed" Version="[10.0,15.0)" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+  </Assets>
+</PackageManifest>

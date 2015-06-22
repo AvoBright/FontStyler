@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="AvoBright.FontStyler.NumericBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="107" d:DesignHeight="25" VerticalAlignment="Center" HorizontalAlignment="Stretch" BorderThickness="0,0,1,0" BorderBrush="#FF707070" Height="25">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="14" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBox Name="NUDTextBox" TextAlignment="Right" PreviewKeyDown="NUDTextBox_PreviewKeyDown" PreviewKeyUp="NUDTextBox_PreviewKeyUp" TextChanged="NUDTextBox_TextChanged" VerticalContentAlignment="Center" BorderThickness="1,1,0,1" Height="25" />
+        <RepeatButton Name="NUDButtonUP" Grid.Column="1" FontSize="8" FontFamily="Marlett" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" Click="NUDButtonUP_Click" Padding="0" Width="14" BorderThickness="1,1,0,1" Margin="0,0,0,0" Height="13" VerticalAlignment="Top" HorizontalAlignment="Right">5</RepeatButton>
+        <RepeatButton Name="NUDButtonDown" Grid.Column="1" FontSize="8"  FontFamily="Marlett" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" Height="12" Click="NUDButtonDown_Click" Padding="0" VerticalAlignment="Bottom" Width="14" BorderThickness="1,0,0,1" HorizontalAlignment="Right">6</RepeatButton>
+    </Grid>
+</UserControl>
