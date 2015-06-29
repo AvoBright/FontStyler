@@ -1,23 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-  <Metadata>
-    <Identity Id="FontStyler.AvoBright.ce4608e4-2cbd-4909-a88d-2e0116dd2378" Version="1.0" Language="en-US" Publisher="AvoBright" />
-    <DisplayName>Font Styler</DisplayName>
-    <Description xml:space="preserve">An Visual Studio extension that provide a GUI to customize text, preview it, and generate the CSS.</Description>
-    <MoreInfo>https://github.com/AvoBright/FontStyler</MoreInfo>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="FontStyler.AvoBright.ce4608e4-2cbd-4909-a88d-2e0116dd2378">
+    <Name>Font Styler</Name>
+    <Author>AvoBright</Author>
+    <Version>1.0</Version>
+    <Description xml:space="preserve">A Visual Studio extension that provide a GUI to customize text, preview it, and generate the CSS.</Description>
+    <Locale>1033</Locale>
+    <MoreInfoUrl>https://github.com/AvoBright/FontStyler</MoreInfoUrl>
     <License>LICENSE.txt</License>
     <Icon>Resources\logo.png</Icon>
     <PreviewImage>Resources\logo.png</PreviewImage>
-    <Tags>Web, Font, CSS</Tags>
-  </Metadata>
-  <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0]" />
-  </Installation>
-  <Dependencies>
-    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.0,)" />
-    <Dependency Id="Microsoft.VisualStudio.MPF" DisplayName="Visual Studio MPF" d:Source="Installed" Version="[10.0,15.0)" />
-  </Dependencies>
-  <Assets>
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-  </Assets>
-</PackageManifest>
+    <InstalledByMsi>false</InstalledByMsi>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+      <VisualStudio Version="11.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+      <VisualStudio Version="12.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+	    <VisualStudio Version="14.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+  </Identifier>
+  <References>
+    <Reference Id="Microsoft.VisualStudio.MPF" MinVersion="10.0">
+      <Name>Visual Studio MPF</Name>
+    </Reference>
+  </References>
+  <Content>
+    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+  </Content>
+</Vsix>
