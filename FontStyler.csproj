@@ -72,6 +72,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CommonFontFamilies.txt">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="FreeTypeWrapper.dll">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

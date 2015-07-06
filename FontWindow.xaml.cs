@@ -48,9 +48,31 @@ namespace AvoBright.FontStyler
                 useTextShadowPolyFill = true;
             }
 
+            LoadCommonFontFamilies();
+
             SetCopyCss();
 
             SetPreviewSource();
+        }
+
+        private void LoadCommonFontFamilies()
+        {
+            string dirPath = System.IO.Path.GetDirectoryName(GetType().Assembly.Location);
+            string filePath = System.IO.Path.Combine(dirPath, "CommonFontFamilies.txt");
+
+            string fileContent = "";
+            using (var reader = new StreamReader(new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
+            {
+                fileContent = reader.ReadToEnd();
+            }
+
+            string[] lines = fileContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            var orderedLines = lines.OrderBy((s) => s);
+
+            foreach (string line in orderedLines)
+            {
+                fontFamilyComboBox.Items.Add(line);
+            }
         }
 
         enum FontFormat
@@ -178,7 +200,7 @@ namespace AvoBright.FontStyler
                         fontFamily = "monospace";
                         break;
                     default:
-                        fontFamily = "sans-serif";
+                        fontFamily = "\"" + fontFamilyComboBox.SelectedItem.ToString() + "\"";
                         break;
                 }
             }
@@ -407,7 +429,14 @@ namespace AvoBright.FontStyler
             if (File.Exists(fontFilePathTextBox.Text))
             {
                 string fontFamilyName = FontFile.GetFontFamilyName(fontFilePathTextBox.Text);
-                customFontFamilyName = "\"" + fontFamilyName + "\"";
+                if (fontFamilyName == null)
+                {
+                    customFontFamilyName = "Unknown";
+                }
+                else
+                {
+                    customFontFamilyName = "\"" + fontFamilyName + "\"";
+                }
             }
             else
             {

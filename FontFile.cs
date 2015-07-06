@@ -38,8 +38,12 @@ namespace AvoBright.FontStyler
                 fixed (sbyte* ptr = sbyteArr)
                 {
                     sbyte* name = GetFontFamilyName(ptr);
-                    string result = new string(name);
+                    if (name == null)
+                    {
+                        return null;
+                    }
 
+                    string result = new string(name);
                     return result;
                 }
             }

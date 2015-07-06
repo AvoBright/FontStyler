@@ -35,9 +35,9 @@
                         <ColumnDefinition Width="214*" />
                     </Grid.ColumnDefinitions>
 
-                    <RadioButton Content="Generic Font" Height="16" HorizontalAlignment="Left" Margin="0,6,0,0" Name="genericFontRadioButton" VerticalAlignment="Center" GroupName="FontGroup" IsChecked="True" />
+                    <RadioButton Content="Common Font" Height="16" HorizontalAlignment="Left" Margin="0,6,0,0" Name="genericFontRadioButton" VerticalAlignment="Center" GroupName="FontGroup" IsChecked="True" />
 
-                    <ComboBox Grid.Row="1" Grid.Column="0" Name="fontFamilyComboBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="19,0,14,0" Height="27"  IsEnabled="{Binding ElementName=genericFontRadioButton, Path=IsChecked}" SelectedIndex="1">
+                    <ComboBox Grid.Row="1" Grid.Column="0" Name="fontFamilyComboBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="27"  IsEnabled="{Binding ElementName=genericFontRadioButton, Path=IsChecked}" SelectedIndex="1" Margin="19,0,10,0">
                         <TextBlock Text="Serif" />
                         <TextBlock Text="Sans Serif" />
                         <TextBlock Text="Monospace" />

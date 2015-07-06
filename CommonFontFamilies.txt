@@ -1,0 +1,8 @@
+﻿Georgia
+Palatino Linotype
+Times New Roman
+Arial
+Trebuchet MS
+Verdana
+Courier New
+Lucida Console
